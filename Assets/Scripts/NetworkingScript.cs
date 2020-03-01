@@ -194,7 +194,7 @@ public class NetworkingScript
     public static void SendJoinRequest(int joinID)
     {
         int loc = INITIAL_OFFSET;
-        int receivers = (1 << 31);
+        int receivers = (1 << 30);
         PackData(ref sendBuffer, ref loc, joinID);
 
         SendIntPtr(loc, receivers, (int)PacketType.JoinRequest);
